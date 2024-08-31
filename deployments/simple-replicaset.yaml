@@ -12,7 +12,7 @@
 # update the resource: kubectl set resources deployment/nginx-deployment -c=nginx --limits=cpu=200m,memory=512Mi
 # resume a rollout: kubectl rollout resume deployment/nginx-deployment
 # watch the rollout status: kubectl get rs --watch
-
+# monitor the progress of deployment: kubectl rollout status
 apiVersion: apps/v1
 kind: Deployment
 metadata:
