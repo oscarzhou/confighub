@@ -1,3 +1,5 @@
+# Check the rollout effect: kubectl rollout status deployment/nginx-deployemnt 
+# check the ReplicaSet: kubectl get rs
 apiVersion: apps/v1
 kind: Deployment
 metadata:
