@@ -1,5 +1,12 @@
-# Check the rollout effect: kubectl rollout status deployment/nginx-deployemnt 
+# Check the rollout effect: kubectl rollout status deployment/nginx-deployment 
 # check the ReplicaSet: kubectl get rs
+# check the rollout history: kubectl rollout history deployment/nginx-deployment
+# annotating a rollout history record: kubectl annotate deployment/nginx-deployment kubernetes.io/change-cause="image updated to 1.16.1"
+# check the rollout history on a specific version: kubectl rollout history deployment/nginx-deployment --revision=2
+# rollback: kubectl rollout undo deployment/nginx-deployment
+# rollback to a specific version: kubectl rollout undo deployment/nginx-deployment --to-revision=2
+# scale a deployment: kubectl scale deployment/nginx-deployment --replicas=10
+# autoscaling based on the cpu utilization: kubectl autoscale deployment/nginx-deployment --min=10 --max=15 --cpu-percent=80
 apiVersion: apps/v1
 kind: Deployment
 metadata:
