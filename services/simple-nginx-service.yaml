@@ -1,3 +1,4 @@
+# list services: kubectl get svc
 apiVersion: v1
 kind: Pod
 metadata:
